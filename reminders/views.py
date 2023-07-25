@@ -4,9 +4,11 @@ from celery import shared_task
 from django.contrib import messages
 from .models import Reminder
 
+
 @shared_task
 def send_reminder_email(email, text):
     send_mail('Нагадування', text, 'your_email@example.com', [email])
+
 
 def create_reminder(request):
     if request.method == 'POST':
@@ -20,7 +22,7 @@ def create_reminder(request):
 
         return redirect('reminders:create-reminder')
 
-    return render(request, 'reminders/reminder_form.html')
+    return render(request, "reminders/reminder_form.html")
 
 
 def reminders_detail(request, pk):
@@ -29,5 +31,6 @@ def reminders_detail(request, pk):
         'reminder': reminder,
     }
 
-    return render(request, 'reminders/reminders_created.html', context)
+    return render(request, "reminders/reminders_created.html", context)
+
 

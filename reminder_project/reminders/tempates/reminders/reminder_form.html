@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Створити напоминання</title>
+    <title>Створити нагадування</title>
 </head>
 <body>
-    <h1>Створити напоминання</h1>
+    <h1>Створити нагадування</h1>
     <form method="post">
         {% csrf_token %}
         <label for="email">Пошта:</label>
         <input type="email" id="email" name="email" required><br>
-        <label for="reminder_text">Текст напоминання:</label>
+        <label for="reminder_text">Текст нагадування:</label>
         <textarea id="reminder_text" name="reminder_text" required></textarea><br>
-        <label for="reminder_datetime">Дата та час напоминання (YYYY-MM-DD HH:MM):</label>
+        <label for="reminder_datetime">Дата та час нагадування (YYYY-MM-DD HH:MM):</label>
         <input type="datetime-local" id="reminder_datetime" name="reminder_datetime" required><br>
-        <input type="submit" value="Створити напоминання">
+        <input type="submit" value="Створити нагадування">
     </form>
 </body>
 </html>
+

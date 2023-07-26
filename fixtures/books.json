@@ -1,0 +1,10 @@
+[
+    {
+        "model": "app_name.book",
+        "pk": 1,
+        "fields": {
+            "title": "Sample Book 1",
+            "author": 1
+        }
+    }
+]

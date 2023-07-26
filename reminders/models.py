@@ -23,3 +23,8 @@ class Quote(models.Model):
 
     def __str__(self):
         return self.text
+
+
+class Book(models.Model):
+     tittle = models.CharField(max_length=200)
+     author = models.ForeignKey(Author, on_delete=models.CASCADE)

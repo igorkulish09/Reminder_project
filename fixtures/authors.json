@@ -1,0 +1,9 @@
+[
+    {
+        "model": "app_name.author",
+        "pk": 1,
+        "fields": {
+            "name": "John Doe"
+        }
+    }
+]
